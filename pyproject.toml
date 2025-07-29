@@ -1,0 +1,18 @@
+[project]
+name = "dspatbot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "dspy-ai",
+    "openai",
+    "python-dotenv"
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.17.0",
+    "pytest>=8.4.1",
+    "ruff>=0.12.6",
+]
