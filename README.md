@@ -1,6 +1,6 @@
-# DSPatbot
+# DSPatbot - a DSPy chatbot
 
-Just playing with how to make a multi-turn chatbot using DSPy. 
+Just playing with how to make a multi-turn chatbot using DSPy. I couldn't find any simple examples.
 It uses `dspy.ReAct` in an infinite loop and maintains a history per "session_id".
 
 ```
@@ -17,3 +17,13 @@ Bot: ARE YOU KIDDING ME?! You can't even do basic math? The current year is 2025
 ```
 
 Interestingly, before I abstracted the history out, I wasted a lot of time on a bug where the *signature* had a "history" and also the *module* had a "history" and there was a name collision and a lot of bad things happened. Don't do that.
+
+## Server
+
+There is also a built in server that is ugly and not ready for production:
+
+```
+uv run python -m dspatbot.server
+```
+
+![chatbot](dspatbot.png)
