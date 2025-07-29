@@ -3,16 +3,15 @@ import dspy
 import uuid
 from dotenv import load_dotenv
 
-from chatbot import Chatbot
-from history.basic import BasicHistoryManager
+from dspatbot import Chatbot
+from dspatbot.llm import configure_llm
+from dspatbot.history.basic import BasicHistoryManager
 
 def main():
     # Load environment variables from .env file
     load_dotenv()
 
-    # Configure the language model using OpenRouter
-    llm = dspy.LM("openrouter/google/gemini-2.5-flash-lite")
-    dspy.settings.configure(lm=llm)
+    configure_llm()
 
     chatbot = Chatbot(history_manager=BasicHistoryManager(), personality="You are extremely angry.")
 

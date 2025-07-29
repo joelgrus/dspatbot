@@ -1,7 +1,7 @@
 import dspy
 
-from history import History, HistoryManager
-from tools import ALL_TOOLS
+from .history import History, HistoryManager
+from .tools import ALL_TOOLS
 
 
 class ConversationalSignature(dspy.Signature):
