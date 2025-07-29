@@ -1,6 +1,6 @@
 # DSPatbot - a DSPy chatbot
 
-Just playing with how to make a multi-turn chatbot using DSPy. I couldn't find any simple examples.
+Just playing with how to make a multi-turn, tool-calling chatbot using DSPy. I couldn't find any simple examples.
 It uses `dspy.ReAct` in an infinite loop and maintains a history per "session_id".
 
 ```
