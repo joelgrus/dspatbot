@@ -4,8 +4,7 @@ The most basic chatbot implementation using DSPy.
 
 import dspy
 
-dspy.configure(lm=dspy.LM('openrouter/google/gemini-2.5-flash-lite'))
-
+dspy.configure(lm=dspy.LM('openai/gpt-4.1'))
 chatbot = dspy.Predict('query,history,personality -> answer')
 
 history = []
